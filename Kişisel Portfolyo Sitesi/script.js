@@ -42,3 +42,4 @@ function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
     document.body.style.overflow = 'auto'; // Kaydırmayı geri açar
 }
+
