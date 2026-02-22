@@ -14,4 +14,31 @@ menuIcon.onclick = () => {
     // Menü panelimize 'active' sınıfını ekleyip çıkarıyorum;
     // CSS'de yazdığım 'active' kuralları sayesinde menünün sağdan/soldan kayarak gelmesini sağlıyorum.
     navbar.classList.toggle('active');
+
 };
+
+function openLightbox(element) {
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbTitle = document.getElementById('lb-title');
+    const lbDesc = document.getElementById('lb-desc');
+
+    // Tıklanan kartın içindeki bilgileri çekiyoruz
+    const imgSrc = element.querySelector('img').src;
+    const title = element.querySelector('h3').innerText;
+    const desc = element.querySelector('p').innerText;
+
+    // Lightbox içeriğine yerleştiriyoruz
+    lbImg.src = imgSrc;
+    lbTitle.innerText = title;
+    lbDesc.innerText = desc;
+
+    // Görünür yapıyoruz
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Arka plan kaymasını engeller
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = 'auto'; // Kaydırmayı geri açar
+}
