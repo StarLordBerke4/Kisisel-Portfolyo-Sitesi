@@ -890,6 +890,150 @@ section {
 
 
 
+/*FOTOĞRAF BÖLÜMÜ BAŞLANGIÇ*/
+/* Galeri Alanı */
+.gallery {
+    background: var(--background-color);
+    padding: 8rem 10%;
+    text-align: center;
+}
+
+/* Sihirli Grid Yapısı */
+.gallery-grid {
+    display: grid;
+    /* Ekranı 4 eşit sütuna böler */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* Satır yüksekliği */
+    grid-auto-rows: 200px; 
+    /* Boşlukları otomatik ve sıkı bir şekilde doldurur */
+    grid-auto-flow: dense; 
+    gap: 2.5rem;
+}
+
+/* Kart Genel Tasarımı */
+.album-card {
+    background: var(--second-background-color);
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+/* DİKEY RESİMLER: 2 satır yüksekliğinde yer kaplar */
+.album-card.vertical {
+    grid-row: span 2;
+}
+
+/* Resim Alanı */
+.album-img {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Kartın boyuna göre değişir */
+    overflow: hidden;
+}
+
+.album-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resmi bozmadan dikdörtgene sığdırır */
+    transition: 0.5s ease;
+}
+
+.album-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--main-color);
+    box-shadow: 0 10px 30px rgba(0, 255, 238, 0.2);
+}
+
+.album-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Yazı Alanı */
+.album-info {
+    padding: 1.5rem;
+    text-align: left;
+    background: var(--second-background-color);
+}
+
+.album-info h3 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.album-info p {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* --- LIGHTBOX (Büyütme) STİLLERİ --- */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    text-align: center;
+}
+
+#lightbox-img {
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 1rem;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 30px var(--main-color);
+}
+
+#lightbox-details {
+    margin-top: 2rem;
+    color: #fff;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 2rem; right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Alt Buton */
+.view-all-btn {
+    margin-top: 5rem;
+    padding: 1.5rem 4rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.view-all-btn:hover {
+    background: var(--main-color);
+    color: #000;
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+/*FOTOĞRAF BÖLÜMÜ BİTİŞ*/
+
+
+
 /*PROJELER BÖLÜMÜ BAŞLANGIÇ*/
 
 /* Projeler Genel Alanı */
@@ -1853,4 +1997,5 @@ section {
         padding: 1.2rem 1.5rem;
     }
 }
+
 /*MEDYA SORGULARI BİTİŞ*/
