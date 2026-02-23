@@ -963,6 +963,7 @@ section {
 
 
 
+
 /*FOTOĞRAF BÖLÜMÜ BAŞLANGIÇ*/
 /* Galeri Alanı */
 .gallery {
@@ -1097,6 +1098,7 @@ section {
     cursor: pointer;
 }
 
+
 /* Alt Buton */
 .view-all-btn {
     margin-top: 5rem;
@@ -1117,7 +1119,8 @@ section {
 }
 
 
-/* --- RESPONSIVE AYARLAR --- */
+
+/* --- FOTOĞRAF GALERİSİ RESPONSIVE AYARLAR --- */
 
 /* 1. Geniş Ekranlar (Large Desktop - 1200px ve üzeri) */
 @media (min-width: 1200px) {
@@ -1190,6 +1193,7 @@ section {
 }
 
 /*FOTOĞRAF BÖLÜMÜ BİTİŞ*/
+
 
 
 
@@ -2158,6 +2162,7 @@ section {
 }
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
