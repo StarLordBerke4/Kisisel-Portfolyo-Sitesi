@@ -297,7 +297,7 @@ Google Developer Students Club AHBV</h4>
 
     <div class="certificates-container">
         
-        <div class="cert-item">
+        <div class="cert-item" onclick="openCertLightbox(this)">
             <div class="cert-rect-box">
                 <img src="img/sertifika1.jpg" alt=" Yapay Zeka ve Teknoloji Akademisi Mezuniyet Sertifikam">
             </div>
@@ -307,7 +307,7 @@ Google Developer Students Club AHBV</h4>
             </div>
         </div>
 
-        <div class="cert-item">
+        <div class="cert-item" onclick="openCertLightbox(this)">
             <div class="cert-rect-box">
             <img src="img/sertifika2.jpg" alt="Yetgen Öğretmen Eğitimi Sertifikam">    
             </div>
@@ -317,7 +317,7 @@ Google Developer Students Club AHBV</h4>
             </div>
         </div>
 
-        <div class="cert-item">
+        <div class="cert-item" onclick="openCertLightbox(this)">
             <div class="cert-rect-box">
                 <img src="img/sertifika3.jpg" alt="Sertifika">
             </div>
@@ -327,7 +327,7 @@ Google Developer Students Club AHBV</h4>
             </div>
         </div>
 
-        <div class="cert-item">
+        <div class="cert-item" onclick="openCertLightbox(this)">
             <div class="cert-rect-box">
                 <img src="img/sertifika4.jpg" alt="Sertifika">
             </div>
@@ -337,7 +337,7 @@ Google Developer Students Club AHBV</h4>
             </div>
         </div>
 
-        <div class="cert-item">
+        <div class="cert-item" onclick="openCertLightbox(this)">
             <div class="cert-rect-box">
                 <img src="img/sertifika5.jpg" alt="Sertifika">
             </div>
@@ -348,7 +348,7 @@ Google Developer Students Club AHBV</h4>
             </div>
         </div>
 
-        <div class="cert-item">
+        <div class="cert-item" onclick="openCertLightbox(this)">
             <div class="cert-rect-box">
                 <img src="img/sertifika6.jpg" alt="Sertifika">
             </div>
@@ -1495,16 +1495,22 @@ Trainee</h3>
         </div>
     </div>
 
-        <div class="social">
-            
-        </div>
-
-        
-
     </footer>
      <!-- FOOTER BÖLÜMÜ BİTİŞ -->
 
     <script src="script.js"></script>
+
+    <div id="cert-lightbox" class="cert-lightbox" onclick="closeCertLightbox()">
+    <span class="close-cert">&times;</span>
+    <div class="cert-lightbox-content">
+        <img id="cert-lightbox-img" src="" alt="">
+        <div class="cert-lightbox-details">
+            <h3 id="cert-lb-title"></h3>
+            <p id="cert-lb-desc"></p>
+        </div>
+    </div>
+</div>
+    
 </body>
 </html>
 
@@ -1516,6 +1522,7 @@ Trainee</h3>
                 
 
                 
+
 
 
 
