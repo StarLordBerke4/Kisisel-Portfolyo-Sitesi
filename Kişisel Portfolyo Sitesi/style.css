@@ -538,6 +538,63 @@ section {
         gap: 4rem;
     }
 }
+
+
+/* --- SERTİFİKA LIGHTBOX (BÜYÜTME) STİLLERİ --- */
+.cert-lightbox {
+    display: none; /* Başlangıçta gizli */
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 8, 8, 0.95); /* Senin arka plan renginle uyumlu */
+    backdrop-filter: blur(10px); /* Arka planı bulanıklaştırır */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: zoom-out;
+}
+
+.cert-lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 1.2rem;
+    border: 2px solid var(--main-color); /* Neon mavi çerçeve */
+    box-shadow: 0 0 30px var(--main-color);
+    animation: certZoom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cert-lightbox-caption {
+    margin-top: 2rem;
+    color: var(--text-color);
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.cert-close {
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+    color: var(--text-color);
+    font-size: 6rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cert-close:hover {
+    color: var(--main-color);
+    transform: rotate(90deg);
+}
+
+/* Açılış Animasyonu */
+@keyframes certZoom {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
 /*SERTİFİKALAR BÖLÜMÜ BİTİŞ*/
 
 
@@ -1999,3 +2056,4 @@ section {
 }
 
 /*MEDYA SORGULARI BİTİŞ*/
+
