@@ -739,7 +739,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center; /* Yatayda ortalar */
-    text-align: justify;   /* Metni ortalar */
+    text-align: center;   /* Metni ortalar */
     flex-grow: 1;
 }
 
@@ -760,6 +760,7 @@ section {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-align: justify;
 }
 
 /* Devamını Oku Butonu */
@@ -2129,6 +2130,7 @@ section {
 }
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
