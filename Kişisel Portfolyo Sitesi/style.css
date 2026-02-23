@@ -421,6 +421,7 @@ section {
 /*EĞİTİM BÖLÜMÜ BİTİŞ*/
 
 
+
 /*SERTİFİKALAR BÖLÜMÜ BAŞLANGIÇ*/
 
 .certificates {
@@ -614,6 +615,7 @@ section {
 /*SERTİFİKALAR BÖLÜMÜ BİTİŞ*/
 
 
+
 /*HİZMETLER BÖLÜMÜ BAŞLANGIÇ*/
 .services {
     background-color: var(--background-color);
@@ -737,7 +739,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center; /* Yatayda ortalar */
-    text-align: center;   /* Metni ortalar */
+    text-align: justify;   /* Metni ortalar */
     flex-grow: 1;
 }
 
@@ -2127,6 +2129,7 @@ section {
 }
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
