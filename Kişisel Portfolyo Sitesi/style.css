@@ -673,11 +673,12 @@ section {
 /*HİZMETLER BÖLÜMÜ BİTİŞ*/
 
 
+
 /*BLOG BÖLÜMÜ BAŞLANGIÇ*/
 /* Blog Bölümü Genel Ayarları */
 .blog {
     background-color: var(--background-color);
-    padding: 10rem 12%; /* Mevcut section yapınla uyumlu */
+    padding: 10rem 12%;
 }
 
 .blog-header {
@@ -685,153 +686,117 @@ section {
     margin-bottom: 5rem;
 }
 
-/* Başlık altındaki neon çizgi */
-.blog-header .header-line {
-    width: 8rem;
-    height: 0.4rem;
-    background: var(--main-color);
-    margin: 2rem auto;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--main-color);
-}
-
-/* Blog Kartları Düzeni (3'lü Grid) */
 .blog-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 eşit sütun */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Bireysel Kart Tasarımı */
+/* Kart Modernizasyonu */
 .blog-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 2.5rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    transition: 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Büyük Kare Görsel Kutusu */
-
-.blog {
-    background-color: var(--second-background-color);
-    padding: 100px 15px;
+.blog-card:hover {
+    transform: translateY(-1rem);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--main-color);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
+/* Görsel Kutusu */
 .blog-img-box {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Görseli tam kare yapar */
-    background-color: var(--second-background-color);
+    aspect-ratio: 1 / 1; 
     border-radius: 2rem;
     overflow: hidden;
-    border: 2px solid transparent;
-    transition: 0.4s ease;
-    cursor: pointer;
+    margin-bottom: 2rem;
 }
 
 .blog-img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Görseli bozmadan kareye sığdırır */
+    object-fit: cover;
     transition: 0.5s ease;
 }
 
-/* Kart Hover Efekti */
-.blog-card:hover .blog-img-box {
-    border-color: var(--main-color);
-    transform: translateY(-1rem);
-    box-shadow: 0 0 2rem rgba(0, 255, 238, 0.2);
+.blog-card:hover .blog-img-box img {
+    transform: scale(1.1);
 }
 
-.blog-card:hover img {
-    transform: scale(1.1); /* Görselde hafif yaklaşma efekti */
-}
-
-/* Metin Alanı (Görsel Altı) */
+/* İçerik ve Hizalama */
 .blog-content {
-    padding: 2rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Yatayda ortalar */
+    text-align: center;   /* Metni ortalar */
+    flex-grow: 1;
 }
 
 .blog-content h3 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: var(--text-color);
-    margin-bottom: 1.2rem;
-    font-weight: 700;
-    line-height: 1.3;
-    transition: 0.3s;
-}
-
-.blog-card:hover .blog-content h3 {
-    color: var(--main-color); /* Hover'da başlık rengi değişir */
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    min-height: 5.6rem; 
 }
 
 .blog-content p {
-    font-size: 1.5rem;
-    color: #ccc; /* Koyu gri/beyaz metin */
+    font-size: 1.4rem;
+    color: #bbb;
     line-height: 1.6;
-    /* Metni 3 satırla sınırla, fazlasını "..." yap */
+    margin-bottom: 2.5rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-/* Buton Tasarımı */
+/* Devamını Oku Butonu */
+.read-more {
+    margin-top: auto; 
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2.5rem;
+    color: var(--main-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: 1px solid var(--main-color);
+    border-radius: 5rem; 
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    background: var(--main-color);
+    color: var(--background-color);
+    box-shadow: 0 0 1.5rem var(--main-color);
+}
+
+.read-more i {
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+.read-more:hover i {
+    transform: translateX(5px);
+}
+
+/* ANA BUTON KONTEYNERI (Dokunmadım) */
 .blog-btn-container {
     text-align: center;
     margin-top: 6rem;
 }
 
-.blog-btn {
-    display: inline-block;
-    padding: 1.5rem 3.5rem;
-    background-color: var(--main-color);
-    color: var(--background-color);
-    font-size: 1.8rem;
-    font-weight: 700;
-    border-radius: 4rem;
-    border: 2px solid var(--main-color);
-    transition: 0.3s ease-in-out;
-}
-
-.blog-btn:hover {
-    background-color: transparent;
-    color: var(--main-color);
-    box-shadow: 0 0 2rem var(--main-color);
-}
-
-/* Blog Kartı İçindeki Küçük Buton Stili */
-.read-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin-top: 2rem;
-    padding: 0.8rem 1.5rem;
-    color: var(--main-color);
-    font-size: 1.4rem;
-    font-weight: 600;
-    border: 1px solid var(--main-color);
-    border-radius: 0.8rem;
-    transition: 0.3s ease-in-out;
-    text-decoration: none;
-}
-
-.read-more i {
-    font-size: 1.8rem; /* Ok işareti boyutu */
-    transition: 0.3s ease;
-}
-
-/* Küçük Buton Hover Efekti */
-.read-more:hover {
-    background-color: var(--main-color);
-    color: var(--background-color);
-    box-shadow: 0 0 1.5rem var(--main-color);
-}
-
-/* Hover yapıldığında ok işaretinin sağa doğru kayması */
-.read-more:hover i {
-    transform: translateX(5px);
-}
 
 /* Responsive (Mobil Uyumluluk) */
 @media (max-width: 992px) {
@@ -2162,6 +2127,7 @@ section {
 }
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
