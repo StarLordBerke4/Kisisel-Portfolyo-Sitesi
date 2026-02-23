@@ -8,7 +8,7 @@ Modern tasarım vizyonumu teknik uzmanlığımla birleştiren bu portfolyo; **Ya
 - <b>Modern Arayüz:</b> Koyu tema ağırlıklı, göz yormayan ve odak noktası projeler olan bir yapı tercih edildi.
 - <b>Responsive Mimari:</b> Mobil, tablet ve masaüstü tüm cihazlarda kusursuz görüntüleme için Mobile-First yaklaşımıyla geliştirildi.
 
-<a href=""><img align="center" src="https://github.com/StarLordBerke4/HTML5-BTKAkademi/blob/main/%C4%B0mages/btkakademi.jpg" alt="btkakademi" width="1100"/></a>
+<a href=""><img align="center" src="https://github.com/StarLordBerke4/Kisisel-Portfolyo-Sitesi/blob/main/Ki%C5%9Fisel%20Portfolyo%20Sitesi/img/UI%20Tasar%C4%B1m.jpg" alt="UI Tasarım" width="1100"/></a>
 
 ### 🛠️ Teknik Stack
 Sitenin geliştirilme sürecinde aşağıdaki teknolojiler ve araçlar kullanılmıştır:
@@ -29,7 +29,7 @@ Sitenin geliştirilme sürecinde aşağıdaki teknolojiler ve araçlar kullanıl
 - <b>Sizden Gelenler:</b> Linkedin üzerinden paylaşılmış yorumlar.
 - <b>İletişim:</b> Bana ulaşabileceğiniz iletişim kanalları.
 
-<a href=""><img align="center" src="https://github.com/StarLordBerke4/CSS3-BTKAkademi/blob/main/G%C3%B6rseller/sta-je-css.png" alt="html" width="1100"/></a>
+<a href=""><img align="center" src="https://github.com/StarLordBerke4/Kisisel-Portfolyo-Sitesi/blob/main/Ki%C5%9Fisel%20Portfolyo%20Sitesi/img/UI%20Tasar%C4%B1m2.jpg" alt="UI Tasarım 2" width="1100"/></a>
 
 - <b>Proje UI Tasarımı</b> https://www.behance.net/gallery/243606721/Portfolyo-Web-Sitem
 
