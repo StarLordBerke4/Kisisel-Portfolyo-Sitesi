@@ -539,6 +539,78 @@ section {
     }
 }
 
+
+
+/* Sertifika kutusuna tıklama imleci ekle */
+.cert-item {
+    cursor: pointer;
+}
+
+/* --- LIGHTBOX (Büyütme) MODAL STİLLERİ --- */
+.cert-lightbox {
+    display: none; /* Başlangıçta gizli */
+    position: fixed;
+    z-index: 9999; /* Her şeyin üstünde durması için */
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cert-lightbox-content {
+    max-width: 85%;
+    max-height: 75vh;
+    text-align: center;
+    animation: zoomInCert 0.4s ease-out;
+}
+
+#cert-lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1.2rem;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 30px var(--main-color);
+}
+
+.cert-lightbox-details {
+    margin-top: 2.5rem;
+    color: var(--text-color);
+}
+
+.cert-lightbox-details h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.cert-lightbox-details p {
+    font-size: 1.6rem;
+    opacity: 0.8;
+}
+
+.close-cert {
+    position: absolute;
+    top: 3rem; right: 4rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-cert:hover {
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+/* Açılış Efekti */
+@keyframes zoomInCert {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
 /*SERTİFİKALAR BÖLÜMÜ BİTİŞ*/
 
 
@@ -2000,5 +2072,6 @@ section {
 }
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
