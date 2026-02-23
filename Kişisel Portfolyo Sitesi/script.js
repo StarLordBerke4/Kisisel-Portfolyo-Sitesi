@@ -17,8 +17,10 @@ menuIcon.onclick = () => {
 
 };
 
+
+
 /**
- * Lightbox'ı açan fonksiyon
+ * Fotoğraf Lightbox'ı açan fonksiyon
  * @param {HTMLElement} element - Tıklanan album-card div'i
  */
 function openLightbox(element) {
@@ -27,48 +29,33 @@ function openLightbox(element) {
     const lbTitle = document.getElementById('lb-title');
     const lbDesc = document.getElementById('lb-desc');
 
-    // Resim kaynağını (src) al
+    // HTML yapından verileri çekiyoruz
     const imgSrc = element.querySelector('img').src;
-    
-    // Başlığı al (h3 etiketi)
     const title = element.querySelector('h3').innerText;
+    
+    // Açıklama olarak tarihi (album-date) kullanıyoruz
+    const date = element.querySelector('.album-date').innerText;
 
-    // AÇIKLAMA KONTROLÜ (Hatanın kaynağı burasıydı):
-    // Eğer kartın içinde <p> etiketi varsa metni al, yoksa boş bırak veya tarihi al
-    const pElement = element.querySelector('.album-info p') || element.querySelector('.album-date');
-    const desc = pElement ? pElement.innerText : "";
-
-    // Lightbox içerisine verileri aktar
+    // Verileri aktar
     lbImg.src = imgSrc;
     lbTitle.innerText = title;
-    lbDesc.innerText = desc;
+    lbDesc.innerText = "Çekim Tarihi: " + date;
 
-    // Lightbox'ı görünür yap (CSS'deki display: none'ı flex yapar)
+    // Görünür yap
     lightbox.style.display = 'flex';
-    
-    // Sayfanın arkada kaymasını engelle
     document.body.style.overflow = 'hidden';
 }
 
-/**
- * Lightbox'ı kapatan fonksiyon
- */
 function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    
-    // Lightbox'ı tekrar gizle
-    lightbox.style.display = 'none';
-    
-    // Sayfa kaydırmasını tekrar aktif et
+    document.getElementById('lightbox').style.display = 'none';
     document.body.style.overflow = 'auto';
 }
 
-// Opsiyonel: 'ESC' tuşuna basınca kapatma özelliği
-document.addEventListener('keydown', function(e) {
-    if (e.key === "Escape") {
-        closeLightbox();
-    }
+// ESC ile kapatma
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") closeLightbox();
 });
+
 
 
 
@@ -121,6 +108,7 @@ document.addEventListener('keydown', function(e) {
         closeCertLightbox();
     }
 });
+
 
 
 
