@@ -31,11 +31,12 @@ Sitenin geliştirilme sürecinde aşağıdaki teknolojiler ve araçlar kullanıl
 
 <a href=""><img align="center" src="https://github.com/StarLordBerke4/CSS3-BTKAkademi/blob/main/G%C3%B6rseller/sta-je-css.png" alt="html" width="1100"/></a>
 
+- <b>Proje UI Tasarımı</b> https://www.behance.net/gallery/243606721/Portfolyo-Web-Sitem
 
 ### 📩 İletişim
 <p>Sitem üzerinden bana ulaşabilir, projelerimi detaylı incelemek için Behance veya LinkedIn üzerinden bağlantı kurabilirsiniz.</p>
 
 - <b>Web Sitesi:</b> [berkemertozturk.com.tr](https://www.berkemertozturk.com.tr/)
 - <b>E-Posta:</b> berkemertozturk1997@gmail.com
-- <b>Behance Profil URL</b> https://drive.google.com/file/d/11NSF-Ciz964MoepLXpeoYfeERlVVF5dE/view?usp=sharing
+- <b>Behance Profil URL</b> [https://www.behance.net/StarLordBerke](https://www.behance.net/StarLordBerke)
 - <b>Linkedin Profil URL:</b> [https://www.linkedin.com/in/starlordberke/](https://www.behance.net/StarLordBerke)
