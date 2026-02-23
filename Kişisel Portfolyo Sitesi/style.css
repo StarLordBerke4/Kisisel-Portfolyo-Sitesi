@@ -1116,6 +1116,79 @@ section {
     box-shadow: 0 0 20px var(--main-color);
 }
 
+
+/* --- RESPONSIVE AYARLAR --- */
+
+/* 1. Geniş Ekranlar (Large Desktop - 1200px ve üzeri) */
+@media (min-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 sütunlu geniş yerleşim */
+        grid-auto-rows: 220px; /* Biraz daha büyük kutular */
+        gap: 3rem;
+    }
+}
+
+/* 2. Tabletler ve Küçük Laptoplar (992px - 1199px) */
+@media (max-width: 1199px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 sütuna düşer */
+        grid-auto-rows: 200px;
+        gap: 2rem;
+    }
+    .gallery {
+        padding: 6rem 5%; /* Kenar boşluklarını daralt */
+    }
+}
+
+/* 3. Küçük Tabletler ve Yatay Telefonlar (768px - 991px) */
+@media (max-width: 991px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 sütunlu dengeli yapı */
+        grid-auto-rows: 180px;
+    }
+    .heading {
+        font-size: 3.5rem; /* Başlık boyutunu küçült */
+    }
+}
+
+/* 4. Cep Telefonları (767px ve altı) */
+@media (max-width: 767px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Tek sütun - Full genişlik */
+        grid-auto-rows: 250px; /* Mobilde dikey dikdörtgenler daha şık durur */
+        gap: 2.5rem;
+    }
+
+    /* Mobilde dikey (vertical) kartların özel yüksekliğini iptal et */
+    /* Çünkü tek sütunda hepsi aynı genişlikte ve yükseklikte olmalı */
+    .album-card.vertical {
+        grid-row: span 1; 
+    }
+
+    .album-info h3 {
+        font-size: 1.5rem; /* Yazıları mobilde okunabilir boyuta çek */
+    }
+
+    .gallery {
+        padding: 4rem 5%;
+    }
+    
+    /* Lightbox mobilde daha çok yer kaplasın */
+    .lightbox-content {
+        max-width: 95%;
+    }
+    
+    #lightbox-img {
+        max-height: 50vh;
+    }
+
+    .close-lightbox {
+        top: 1.5rem;
+        right: 2rem;
+        font-size: 4rem;
+    }
+}
+
 /*FOTOĞRAF BÖLÜMÜ BİTİŞ*/
 
 
@@ -2085,6 +2158,7 @@ section {
 }
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
