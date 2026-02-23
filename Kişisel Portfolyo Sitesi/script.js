@@ -72,4 +72,55 @@ document.addEventListener('keydown', function(e) {
 
 
 
+/**
+ * Sertifika Lightbox'ı açan fonksiyon
+ * @param {HTMLElement} element - Tıklanan cert-item div'i
+ */
+function openCertLightbox(element) {
+    const lightbox = document.getElementById('cert-lightbox');
+    const lbImg = document.getElementById('cert-lightbox-img');
+    const lbTitle = document.getElementById('cert-lb-title');
+    const lbDesc = document.getElementById('cert-lb-desc');
+
+    // Resim kaynağını al
+    const imgSrc = element.querySelector('img').src;
+    
+    // Başlığı al (h4 etiketi)
+    const title = element.querySelector('.cert-details h4').innerText;
+
+    // Alt bilgiyi al (span etiketi)
+    const spanElement = element.querySelector('.cert-details span');
+    const desc = spanElement ? spanElement.innerText : "";
+
+    // Verileri Lightbox içerisine aktar
+    lbImg.src = imgSrc;
+    lbTitle.innerText = title;
+    lbDesc.innerText = desc;
+
+    // Lightbox'ı görünür yap
+    lightbox.style.display = 'flex';
+    
+    // Sayfanın arkada kaymasını engelle
+    document.body.style.overflow = 'hidden';
+}
+
+/**
+ * Sertifika Lightbox'ı kapatan fonksiyon
+ */
+function closeCertLightbox() {
+    const lightbox = document.getElementById('cert-lightbox');
+    lightbox.style.display = 'none';
+    
+    // Sayfa kaydırmasını tekrar aktif et
+    document.body.style.overflow = 'auto';
+}
+
+// ESC tuşuna basınca kapatma özelliği
+document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape") {
+        closeCertLightbox();
+    }
+});
+
+
 
