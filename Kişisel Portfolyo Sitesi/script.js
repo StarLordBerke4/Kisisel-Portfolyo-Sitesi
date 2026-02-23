@@ -70,3 +70,36 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+
+/*Sertifikalar Bölümü*/
+function openCert(element) {
+    const lightbox = document.getElementById('certLightbox');
+    const fullImg = document.getElementById('certFullImg');
+    const caption = document.getElementById('certCaption');
+    
+    // Tıklanan kutunun içindeki resmi ve başlığı alıyoruz
+    const clickedImgSrc = element.querySelector('img').src;
+    const clickedTitle = element.parentElement.querySelector('h4').innerText;
+
+    // Modalı doldur ve göster
+    fullImg.src = clickedImgSrc;
+    caption.innerText = clickedTitle;
+    lightbox.style.display = 'flex';
+    
+    // Sayfanın arkada kaymasını engeller
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCert() {
+    const lightbox = document.getElementById('certLightbox');
+    lightbox.style.display = 'none';
+    
+    // Kaydırmayı tekrar aktif et
+    document.body.style.overflow = 'auto';
+}
+
+// ESC tuşuna basınca kapatma özelliği
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") closeCert();
+});
+
