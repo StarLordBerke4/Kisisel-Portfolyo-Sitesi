@@ -3,6 +3,7 @@ Modern tasarım vizyonumu teknik uzmanlığımla birleştiren bu portfolyo; **Ya
 
 ### 🎨 Tasarım ve Vizyon
 <p>Sitem, sadece bir tanıtım sayfası değil; Yönetim Bilişim Sistemleri (MIS) disiplini ile UI/UX tasarım prensiplerinin bir sentezidir. Tasarım sürecinde kullanıcı deneyimini (UX) ön planda tutarak, estetik ve fonksiyonelliği bir araya getirmeyi hedefledim.</p>
+
 - <b>Prototipleme:</b> Tüm arayüz kodlama öncesinde Figma üzerinde titizlikle planlandı.
 - <b>Modern Arayüz:</b> Koyu tema ağırlıklı, göz yormayan ve odak noktası projeler olan bir yapı tercih edildi.
 - <b>Responsive Mimari:</b> Mobil, tablet ve masaüstü tüm cihazlarda kusursuz görüntüleme için Mobile-First yaklaşımıyla geliştirildi.
