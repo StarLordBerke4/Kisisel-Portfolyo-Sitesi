@@ -2129,60 +2129,7 @@ section {
 }
 
 
-/* --- AKILLI TV İÇİN ÖLÇEKLENDİRİLMİŞ DÜZELTME --- */
 
-/* TV tarayıcıları genellikle 1920px genişliktedir ancak her şeyi devasa gösterir. 
-   Bu yüzden tasarımı %80 oranında küçülterek ekrana sığdırıyoruz. */
-
-@media screen and (min-width: 1500px) {
-    html {
-        /* Metinlerin aşırı büyümesini engellemek için fontu düşürüyoruz */
-        font-size: 50% !important; 
-        -webkit-text-size-adjust: none;
-    }
-
-    /* TV tarayıcısının tüm sayfayı çok büyük göstermesini 
-       engellemek için body seviyesinde bir zoom/scale uygulayalım */
-    body {
-        zoom: 0.85; /* Çoğu modern TV tarayıcısında (LG/Samsung) çalışır */
-        -moz-transform: scale(0.85); /* Firefox tabanlı TV tarayıcıları için */
-        -moz-transform-origin: 0 0;
-    }
-
-    /* Fotoğraftaki 'Merhaba ben Berke' kısmının aşırı yayılmasını önle */
-    .home {
-        padding: 5rem 10% !important;
-        flex-direction: row !important; /* Yan yana durduklarından emin olalım */
-        gap: 5rem;
-    }
-
-    .home-content h1 {
-        font-size: 6rem !important; /* Önceki kodda çok büyüktü, şimdi küçülttük */
-        white-space: nowrap; /* İsmin kırılmasını engeller */
-    }
-
-    .home-content p {
-        font-size: 1.8rem !important;
-        line-height: 1.5;
-        max-width: 60rem;
-    }
-
-    /* Navbar linklerinin birbirine girmemesi için */
-    .header {
-        padding: 2rem 5% !important;
-    }
-
-    .navbar a {
-        font-size: 1.8rem !important;
-        margin-left: 2rem;
-    }
-
-    /* Blog Kartları Düzenlemesi */
-    .blog-container {
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 3rem !important;
-    }
-}
 
 /* --- TV VE ULTRA GENİŞ EKRANLAR İÇİN KESİN ÇÖZÜM (MASTER) --- */
 @media screen and (min-width: 1400px) {
@@ -2267,6 +2214,7 @@ section {
 }
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
