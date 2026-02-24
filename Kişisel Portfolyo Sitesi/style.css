@@ -2128,7 +2128,82 @@ section {
     }
 }
 
+
+/* --- BÜYÜK EKRANLAR (50", 55", 65" TV VE 4K MONİTÖRLER) --- */
+
+@media (min-width: 2560px) {
+    html {
+        /* Yazı tiplerini ve ölçeklenebilir birimleri (rem) büyütüyoruz */
+        /* Böylece TV başında oturan biri içeriği rahatça okuyabilir */
+        font-size: 85%; 
+    }
+
+    /* İçeriğin devasa ekranda aşırı yayılmasını önlemek için bir sınır koyuyoruz */
+    section {
+        padding: 15rem 15% 5rem;
+        max-width: 3200px;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 3rem 10%;
+    }
+
+    /* Blog ve Proje Kartlarını 4'lü veya 5'li düzene çekiyoruz */
+    .blog-container, 
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6rem; /* Geniş alanda daha fazla nefes payı */
+    }
+
+    /* Kahraman (Home) Bölümü Ayarları */
+    .home {
+        gap: 15rem;
+    }
+
+    .home-content h1 {
+        font-size: 12rem; /* Başlıklar devasa olmalı */
+    }
+
+    .home-content h3 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 35vw; /* Görselin orantısını koruyoruz */
+        max-width: 800px;
+    }
+
+    /* Hizmetler Bölümü */
+    .services-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+    }
+
+    .services-info {
+        padding: 4rem;
+    }
+
+    /* Kartların Hover Efektlerini Güçlendiriyoruz */
+    .blog-card, .project-card {
+        padding: 2.5rem;
+    }
+}
+
+/* --- EKSTRA GENİŞ 4K EKRANLAR (3840px ve üzeri) --- */
+@media (min-width: 3840px) {
+    html {
+        font-size: 110%; /* 4K TV'lerde kumanda ile gezinen kullanıcılar için ideal */
+    }
+
+    .blog-container, 
+    .projects-grid {
+        grid-template-columns: repeat(5, 1fr); /* 5 sütuna çıkabiliriz */
+    }
+}
+
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
