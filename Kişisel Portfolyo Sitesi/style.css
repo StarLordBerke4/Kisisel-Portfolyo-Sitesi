@@ -2129,80 +2129,74 @@ section {
 }
 
 
-/* --- BÜYÜK EKRANLAR (50", 55", 65" TV VE 4K MONİTÖRLER) --- */
+/* --- AKILLI TV (LG, SAMSUNG, ANDROID TV) ÖZEL DÜZELTME --- */
 
-@media (min-width: 2560px) {
+/* TV tarayıcıları genellikle kendilerini 1280px veya 1920px olarak rapor eder 
+   ancak devasa ekranda render yaparlar. Bu yüzden 'zoom' ve 'scale' kullanmalıyız. */
+
+@media screen and (min-width: 1921px), screen and (max-width: 3840px) and (orientation: landscape) {
     html {
-        /* Yazı tiplerini ve ölçeklenebilir birimleri (rem) büyütüyoruz */
-        /* Böylece TV başında oturan biri içeriği rahatça okuyabilir */
-        font-size: 85%; 
+        /* TV'de metinlerin iç içe girmesini engellemek için ana font boyutunu sabitliyoruz */
+        font-size: 75% !important; 
+        -webkit-text-size-adjust: 100%;
     }
 
-    /* İçeriğin devasa ekranda aşırı yayılmasını önlemek için bir sınır koyuyoruz */
-    section {
-        padding: 15rem 15% 5rem;
-        max-width: 3200px;
-        margin: 0 auto;
+    body {
+        /* Sayfanın yanlara taşmasını engelle */
+        overflow-x: hidden;
     }
 
-    header {
-        padding: 3rem 10%;
-    }
-
-    /* Blog ve Proje Kartlarını 4'lü veya 5'li düzene çekiyoruz */
-    .blog-container, 
-    .projects-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 6rem; /* Geniş alanda daha fazla nefes payı */
-    }
-
-    /* Kahraman (Home) Bölümü Ayarları */
+    /* Fotoğraftaki ana başlık ve metin kaymalarını düzeltmek için */
     .home {
-        gap: 15rem;
+        min-height: 100vh;
+        padding: 10rem 10% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8rem;
     }
 
     .home-content h1 {
-        font-size: 12rem; /* Başlıklar devasa olmalı */
+        font-size: 8rem !important; /* TV'de okunabilir devasa boyut */
+        line-height: 1.1;
     }
 
-    .home-content h3 {
-        font-size: 5rem;
+    .home-content p {
+        font-size: 2.2rem !important;
+        max-width: 80rem;
+        line-height: 1.6;
     }
 
-    .home-img img {
-        width: 35vw; /* Görselin orantısını koruyoruz */
-        max-width: 800px;
+    /* Navbar'daki iç içe geçmeyi düzelt */
+    .header {
+        padding: 3rem 8% !important;
     }
 
-    /* Hizmetler Bölümü */
-    .services-container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 5rem;
+    .navbar a {
+        font-size: 2.2rem !important;
+        margin-left: 3rem;
     }
 
-    .services-info {
-        padding: 4rem;
+    /* Blog kartlarının TV'de devasa ve bozuk durmasını engelle */
+    .blog-container {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 5rem !important;
+        padding: 0 5%;
     }
 
-    /* Kartların Hover Efektlerini Güçlendiriyoruz */
-    .blog-card, .project-card {
-        padding: 2.5rem;
+    .blog-card {
+        padding: 3rem !important;
     }
 }
 
-/* --- EKSTRA GENİŞ 4K EKRANLAR (3840px ve üzeri) --- */
-@media (min-width: 3840px) {
-    html {
-        font-size: 110%; /* 4K TV'lerde kumanda ile gezinen kullanıcılar için ideal */
-    }
-
-    .blog-container, 
-    .projects-grid {
-        grid-template-columns: repeat(5, 1fr); /* 5 sütuna çıkabiliriz */
-    }
+/* TV Uzaktan Kumandası ile navigasyon için fokus çerçevesini belirginleştir */
+:focus {
+    outline: 4px solid var(--main-color);
+    outline-offset: 4px;
 }
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
