@@ -2128,7 +2128,91 @@ section {
     }
 }
 
+
+
+/* --- SADECE TV VE ULTRA GENİŞ EKRANLAR (2K/4K/TV) --- */
+/* Laptop ve monitörleri etkilememesi için sınırı 1900px'e çektik */
+@media screen and (min-width: 1900px) {
+    html {
+        font-size: 0.75vw !important; 
+        -webkit-text-size-adjust: none;
+    }
+
+    body {
+        zoom: 0.85; 
+        -moz-transform: scale(0.85);
+        -moz-transform-origin: 0 0;
+        overflow-x: hidden;
+    }
+
+    /* Yatay Boşluk (Gap) Düzenlemeleri - Öğelerin birbirine yapışmasını engeller */
+    .btn-group, .social-icons {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 4rem !important; /* Önemli: Yatay boşluğu burada sabitliyoruz */
+    }
+
+    /* Proje etiketleri ve yetenek kutuları arasındaki yatay mesafe */
+    .project-content .tags, .skills-container {
+        display: flex !important;
+        gap: 2.5rem !important;
+        flex-wrap: wrap !important;
+    }
+
+    /* Ana Konteyner Ayarı */
+    .home {
+        display: flex !important;
+        flex-direction: row !important; 
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 80vh;
+        gap: 12rem; 
+        padding: 5rem 10% !important;
+    }
+
+    .home-content h1 {
+        font-size: 6rem !important;
+        white-space: nowrap;
+    }
+
+    .home-content p {
+        font-size: 1.6rem !important;
+        line-height: 1.8;
+        max-width: 65rem;
+    }
+
+    /* Resim Boyutu TV için Sabitlendi */
+    .home-img img {
+        width: 25vw !important;
+        max-width: 450px;
+    }
+
+    /* Blog Bölümü */
+    .blog-container {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 4rem !important;
+    }
+}
+
+/* --- STANDART LAPTOP VE MONİTÖRLER (Korumaya Alınan Bölge) --- */
+/* 1400px ile 1899px arası cihazlarda standart font boyutuna sadık kalıyoruz */
+@media screen and (min-width: 1400px) and (max-width: 1899px) {
+    html {
+        font-size: 62.5%; /* Standart 10px bazlı rem sistemi */
+    }
+    
+    body {
+        zoom: 1; /* Zoom'u sıfırlıyoruz */
+        transform: none;
+    }
+
+    .home-img img {
+        width: 350px; /* Laptop için makul boyut */
+    }
+}
+
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
