@@ -2130,11 +2130,41 @@ section {
 
 
 
-/* --- SADECE TV VE ULTRA GENİŞ EKRANLAR (2K/4K/TV) --- */
-/* Laptop ve monitörleri etkilememesi için sınırı 1900px'e çektik */
+
+/* ============================================================
+   1. GENEL / MASAÜSTÜ / LAPTOP AYARLARI (1025px - 1899px)
+   Bu aralıkta site standart rem (62.5%) sistemine döner.
+   ============================================================ */
+@media screen and (min-width: 1025px) and (max-width: 1899px) {
+    html {
+        font-size: 62.5% !important; /* Standart laptop/monitör ayarı */
+    }
+
+    body {
+        zoom: 1 !important;
+        -moz-transform: scale(1) !important;
+        transform: none !important;
+    }
+
+    .home {
+        padding: 10rem 10%;
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .home-img img {
+        width: 30vw;
+        max-width: 400px;
+    }
+}
+
+/* ============================================================
+   2. SADECE AKILLI TV VE ULTRA GENİŞ EKRANLAR (1900px +)
+   Senin beğendiğin TV ayarları sadece burada çalışır.
+   ============================================================ */
 @media screen and (min-width: 1900px) {
     html {
-        font-size: 0.75vw !important; 
+        font-size: 0.75vw !important; /* TV için dinamik font */
         -webkit-text-size-adjust: none;
     }
 
@@ -2145,28 +2175,22 @@ section {
         overflow-x: hidden;
     }
 
-    /* Yatay Boşluk (Gap) Düzenlemeleri - Öğelerin birbirine yapışmasını engeller */
-    .btn-group, .social-icons {
+    /* TV'de butonlar ve öğeler arası YATAY boşluk (İstediğin kısımlar) */
+    .btn-group, 
+    .social-icons,
+    .project-content .tags, 
+    .skills-container {
         display: flex !important;
         flex-direction: row !important;
-        gap: 4rem !important; /* Önemli: Yatay boşluğu burada sabitliyoruz */
+        gap: 4rem !important; /* Yatayda birbirine yapışmayı önler */
     }
 
-    /* Proje etiketleri ve yetenek kutuları arasındaki yatay mesafe */
-    .project-content .tags, .skills-container {
-        display: flex !important;
-        gap: 2.5rem !important;
-        flex-wrap: wrap !important;
-    }
-
-    /* Ana Konteyner Ayarı */
     .home {
         display: flex !important;
-        flex-direction: row !important; 
+        flex-direction: row !important;
         align-items: center !important;
         justify-content: center !important;
-        min-height: 80vh;
-        gap: 12rem; 
+        gap: 12rem;
         padding: 5rem 10% !important;
     }
 
@@ -2175,43 +2199,25 @@ section {
         white-space: nowrap;
     }
 
-    .home-content p {
-        font-size: 1.6rem !important;
-        line-height: 1.8;
-        max-width: 65rem;
-    }
-
-    /* Resim Boyutu TV için Sabitlendi */
     .home-img img {
         width: 25vw !important;
         max-width: 450px;
     }
-
-    /* Blog Bölümü */
-    .blog-container {
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 4rem !important;
-    }
 }
 
-/* --- STANDART LAPTOP VE MONİTÖRLER (Korumaya Alınan Bölge) --- */
-/* 1400px ile 1899px arası cihazlarda standart font boyutuna sadık kalıyoruz */
-@media screen and (min-width: 1400px) and (max-width: 1899px) {
-    html {
-        font-size: 62.5%; /* Standart 10px bazlı rem sistemi */
-    }
-    
+/* ============================================================
+   3. TABLET VE MOBİL KORUMASI (0px - 1024px)
+   Bu cihazların TV ayarlarından etkilenmesini tamamen kesiyoruz.
+   ============================================================ */
+@media screen and (max-width: 1024px) {
     body {
-        zoom: 1; /* Zoom'u sıfırlıyoruz */
-        transform: none;
+        zoom: 1 !important;
+        transform: none !important;
     }
-
-    .home-img img {
-        width: 350px; /* Laptop için makul boyut */
-    }
+    /* Burada senin mevcut mobil/tablet CSS kodların çalışmaya devam eder */
 }
-
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
