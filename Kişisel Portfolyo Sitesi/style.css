@@ -2131,89 +2131,63 @@ section {
 
 
 
-/* --- TV VE ULTRA GENİŞ EKRANLAR İÇİN KESİN ÇÖZÜM (MASTER) --- */
-@media screen and (min-width: 1400px) {
+/* --- AKILLI TV İÇİN ÖLÇEKLENDİRİLMİŞ DÜZELTME --- */
+
+/* TV tarayıcıları genellikle 1920px genişliktedir ancak her şeyi devasa gösterir. 
+   Bu yüzden tasarımı %80 oranında küçülterek ekrana sığdırıyoruz. */
+
+@media screen and (min-width: 1500px) {
     html {
-        /* Ekranın genişliğine göre (vw) yazı boyutunu dinamik ayarlıyoruz. 
-           Bu, TV'nin kendi büyütme (zoom) davranışını devre dışı bırakır. */
-        font-size: 0.75vw !important; 
+        /* Metinlerin aşırı büyümesini engellemek için fontu düşürüyoruz */
+        font-size: 50% !important; 
         -webkit-text-size-adjust: none;
     }
 
+    /* TV tarayıcısının tüm sayfayı çok büyük göstermesini 
+       engellemek için body seviyesinde bir zoom/scale uygulayalım */
     body {
-        overflow-x: hidden;
+        zoom: 0.85; /* Çoğu modern TV tarayıcısında (LG/Samsung) çalışır */
+        -moz-transform: scale(0.85); /* Firefox tabanlı TV tarayıcıları için */
+        -moz-transform-origin: 0 0;
     }
 
-    /* Ana Konteyner Ayarı */
+    /* Fotoğraftaki 'Merhaba ben Berke' kısmının aşırı yayılmasını önle */
     .home {
-        display: flex !important;
-        flex-direction: row !important; /* TV'de yan yana durmayı zorunlu tutar */
-        align-items: center !important;
-        justify-content: center !important;
-        min-height: 80vh;
-        gap: 12rem; /* Yazı ve resim arası boşluk */
         padding: 5rem 10% !important;
-    }
-
-    .home-content {
-        flex: 1.2; /* Yazı alanına daha fazla yer ayır */
-        text-align: left;
+        flex-direction: row !important; /* Yan yana durduklarından emin olalım */
+        gap: 5rem;
     }
 
     .home-content h1 {
-        font-size: 6rem !important; /* Başlığı makul bir boyuta çektik */
-        line-height: 1.2;
-        margin-bottom: 2rem;
-        white-space: nowrap; /* İsmin alt satıra kayıp bozulmasını engeller */
+        font-size: 6rem !important; /* Önceki kodda çok büyüktü, şimdi küçülttük */
+        white-space: nowrap; /* İsmin kırılmasını engeller */
     }
 
     .home-content p {
-        font-size: 1.6rem !important;
-        line-height: 1.8;
-        max-width: 65rem; /* Metnin sağa çok yayılmasını önler */
-        color: #ddd;
+        font-size: 1.8rem !important;
+        line-height: 1.5;
+        max-width: 60rem;
     }
 
-    /* Resim Kutusu Ayarı */
-    .home-img {
-        flex: 0.8;
-        display: flex;
-        justify-content: center;
-    }
-
-    .home-img img {
-        width: 25vw !important; /* Ekranın 4'te 1'i kadar sabit orantı */
-        max-width: 450px; /* Çok devasa olmasını engelle */
-        height: auto;
-        border-radius: 50%;
-        border: 0.8rem solid var(--main-color);
-        box-shadow: 0 0 5rem var(--main-color);
-    }
-
-    /* Header / Navbar Düzeltmesi */
+    /* Navbar linklerinin birbirine girmemesi için */
     .header {
-        padding: 2.5rem 8% !important;
+        padding: 2rem 5% !important;
     }
 
     .navbar a {
-        font-size: 1.5rem !important;
-        margin-left: 3rem;
+        font-size: 1.8rem !important;
+        margin-left: 2rem;
     }
-}
 
-/* Blog Bölümü TV Düzeltmesi */
-@media screen and (min-width: 1400px) {
+    /* Blog Kartları Düzenlemesi */
     .blog-container {
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 4rem !important;
-    }
-    
-    .blog-card {
-        padding: 2.5rem !important;
+        gap: 3rem !important;
     }
 }
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
