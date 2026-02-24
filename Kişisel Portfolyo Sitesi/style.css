@@ -2266,54 +2266,8 @@ section {
     }
 }
 
-
-
-@media screen and (min-width: 1400px) {
-    
-    /* 1. İletişim ve CV Butonları Arası Yatay Boşluk */
-    .btn-group {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 3.5rem !important; /* Butonların arasına net 35px boşluk koyar */
-    }
-
-    /* 2. Proje Etiketleri Arası (Python, SPSS, İstatistiksel Analiz) */
-    /* Bu kısım fotoğraftaki o iç içe geçmiş kutucukları ayırır */
-    .project-content .tags, 
-    .project-card .tags,
-    div[class*="tags"] { 
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important; /* Sığmazsa alt satıra geçer */
-        gap: 2rem !important; /* Kutucuklar arası yatay mesafe */
-    }
-
-    /* 3. Yetenek/Araç Kutucukları (Gamma, Copilot, ChatGPT vb.) */
-    /* Fotoğraftaki yan yana bitişik duran araç isimlerini ayırır */
-    .skills-container, 
-    .skills-content,
-    .skills-box {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        gap: 4rem !important; /* İkonlar/İsimler arası geniş boşluk */
-    }
-
-    /* 4. Sosyal Medya İkonları Arası Yatay Boşluk */
-    .social-icons {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 3rem !important; 
-    }
-
-    /* 5. Butonların İçindeki Yazıların Sıkışmaması İçin */
-    .btn, .read-more, [class*="btn"] {
-        padding-left: 4rem !important;
-        padding-right: 4rem !important;
-        white-space: nowrap !important; /* Yazının buton içinde kırılmasını önler */
-    }
-}
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
