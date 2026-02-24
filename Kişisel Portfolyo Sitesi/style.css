@@ -2267,51 +2267,54 @@ section {
 }
 
 
+
 @media screen and (min-width: 1400px) {
-    /* 1. Ana Buton Grupları (CV ve İletişim Butonları arası) */
+    
+    /* 1. İletişim ve CV Butonları Arası Yatay Boşluk */
     .btn-group {
         display: flex !important;
-        gap: 3.5rem !important; /* Butonların arasına net bir koridor açar */
-        margin-top: 5rem !important;
-        justify-content: flex-start; /* TV'de sola hizalı kalmalarını garanti eder */
+        flex-direction: row !important;
+        gap: 3.5rem !important; /* Butonların arasına net 35px boşluk koyar */
     }
 
-    /* 2. Proje Etiketleri ve Yazılım Dilleri (Bitişik duran kutucuklar) */
-    /* .tags veya kullandığın sınıf ismine göre burayı güncelle */
-    .project-card .tags, 
-    .skills-content .tag,
-    .project-content div { 
+    /* 2. Proje Etiketleri Arası (Python, SPSS, İstatistiksel Analiz) */
+    /* Bu kısım fotoğraftaki o iç içe geçmiş kutucukları ayırır */
+    .project-content .tags, 
+    .project-card .tags,
+    div[class*="tags"] { 
         display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important; /* Sığmazsa alt satıra geçer */
+        gap: 2rem !important; /* Kutucuklar arası yatay mesafe */
+    }
+
+    /* 3. Yetenek/Araç Kutucukları (Gamma, Copilot, ChatGPT vb.) */
+    /* Fotoğraftaki yan yana bitişik duran araç isimlerini ayırır */
+    .skills-container, 
+    .skills-content,
+    .skills-box {
+        display: flex !important;
+        flex-direction: row !important;
         flex-wrap: wrap !important;
-        gap: 2rem !important; /* Etiketlerin arasına 20px'lik bir boşluk ekler */
-        margin: 2.5rem 0 !important;
+        gap: 4rem !important; /* İkonlar/İsimler arası geniş boşluk */
     }
 
-    /* 3. Butonların Kendi İç Hacmi (Padding) */
-    /* Butonun içindeki yazının kenarlara yapışmasını engeller */
-    .btn, .read-more, .blog-btn, [class*="btn"] {
-        padding: 1.8rem 4rem !important; 
-        display: inline-flex !important;
-        align-items: center;
-        justify-content: center;
-        letter-spacing: 0.1rem; /* Harf aralarını açarak TV'de okunurluğu artırır */
-    }
-
-    /* 4. Sosyal Medya İkonları Arasındaki Mesafe */
+    /* 4. Sosyal Medya İkonları Arası Yatay Boşluk */
     .social-icons {
         display: flex !important;
-        gap: 3rem !important;
-        margin: 4rem 0 !important;
+        flex-direction: row !important;
+        gap: 3rem !important; 
     }
 
-    /* 5. Paragraflar ve Bölümler Arası Dikey Mesafe */
-    .home-content p {
-        margin-bottom: 4rem !important;
-        line-height: 2 !important; /* Satır aralarını TV için daha da açıyoruz */
+    /* 5. Butonların İçindeki Yazıların Sıkışmaması İçin */
+    .btn, .read-more, [class*="btn"] {
+        padding-left: 4rem !important;
+        padding-right: 4rem !important;
+        white-space: nowrap !important; /* Yazının buton içinde kırılmasını önler */
     }
 }
-
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
