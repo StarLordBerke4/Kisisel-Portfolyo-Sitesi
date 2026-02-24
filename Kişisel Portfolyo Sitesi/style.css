@@ -2266,7 +2266,53 @@ section {
     }
 }
 
+
+@media screen and (min-width: 1400px) {
+    /* 1. Ana Buton Grupları (CV ve İletişim Butonları arası) */
+    .btn-group {
+        display: flex !important;
+        gap: 3.5rem !important; /* Butonların arasına net bir koridor açar */
+        margin-top: 5rem !important;
+        justify-content: flex-start; /* TV'de sola hizalı kalmalarını garanti eder */
+    }
+
+    /* 2. Proje Etiketleri ve Yazılım Dilleri (Bitişik duran kutucuklar) */
+    /* .tags veya kullandığın sınıf ismine göre burayı güncelle */
+    .project-card .tags, 
+    .skills-content .tag,
+    .project-content div { 
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 2rem !important; /* Etiketlerin arasına 20px'lik bir boşluk ekler */
+        margin: 2.5rem 0 !important;
+    }
+
+    /* 3. Butonların Kendi İç Hacmi (Padding) */
+    /* Butonun içindeki yazının kenarlara yapışmasını engeller */
+    .btn, .read-more, .blog-btn, [class*="btn"] {
+        padding: 1.8rem 4rem !important; 
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.1rem; /* Harf aralarını açarak TV'de okunurluğu artırır */
+    }
+
+    /* 4. Sosyal Medya İkonları Arasındaki Mesafe */
+    .social-icons {
+        display: flex !important;
+        gap: 3rem !important;
+        margin: 4rem 0 !important;
+    }
+
+    /* 5. Paragraflar ve Bölümler Arası Dikey Mesafe */
+    .home-content p {
+        margin-bottom: 4rem !important;
+        line-height: 2 !important; /* Satır aralarını TV için daha da açıyoruz */
+    }
+}
+
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
