@@ -1726,6 +1726,116 @@ section {
 /*İLETİŞİM BÖLÜMÜ BİTİŞ*/
 
 
+/* İLETİŞİM FORMU GENEL STİLLERİ BAŞLANGIÇ */
+.contact-form-section {
+    padding: 10rem 7% 5rem; /* Sitenin diğer bölümleriyle hizalı olması için */
+    background: transparent;
+}
+
+.contact-container {
+    max-width: 800px; /* Formun çok yayılmaması için ideal genişlik */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form {
+    margin-top: 4rem;
+}
+
+/* Giriş Alanları Gruplama (Yan yana duranlar) */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-box {
+    flex: 1 1 45%; /* Masaüstünde yan yana %45 genişlik */
+}
+
+/* Input ve Textarea Ortak Tasarımı */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05); /* Çok hafif şeffaf arka plan */
+    border: 2px solid rgba(238, 238, 238, 0.1);
+    border-radius: 1rem;
+    transition: 0.3s ease;
+}
+
+/* Inputlara tıklandığında (Focus) neon efekti */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--main-color); /* Sitenin ana turkuaz rengi */
+    box-shadow: 0 0 15px var(--main-color);
+    outline: none;
+}
+
+/* Mesaj alanı tam genişlik */
+.textarea-box {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.contact-form textarea {
+    resize: none; /* Kullanıcının formu bozmasını engeller */
+}
+
+/* Gönder Butonu Özelleştirme */
+.contact-form .btn {
+    cursor: pointer;
+    border: none;
+    background: var(--main-color);
+    color: #000;
+    font-weight: 600;
+    padding: 1.5rem 4rem;
+    border-radius: 4rem;
+    font-size: 1.8rem;
+    transition: 0.4s ease-in-out;
+}
+
+.contact-form .btn:hover {
+    box-shadow: 0 0 25px var(--main-color);
+    transform: scale(1.05);
+}
+
+
+/* TABLET VE MOBİL UYUMU */
+@media (max-width: 768px) {
+    .input-box {
+        flex: 1 1 100%; /* Mobilde kutular alt alta gelir */
+    }
+    
+    .contact-form-section {
+        padding: 5rem 5%;
+    }
+}
+
+/* SENİN ÖZEL TV AYARLARIN İÇİN (1900px+) */
+@media screen and (min-width: 1900px) {
+    .contact-container {
+        max-width: 1200px; /* Büyük ekranda biraz daha genişleyebilir */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.8rem !important; /* TV'de okunabilirlik için */
+        padding: 2rem;
+    }
+    
+    .input-group {
+        gap: 4rem !important; /* TV'de istediğin o yatay boşluk */
+    }
+}
+
+/* İLETİŞİM FORMU GENEL STİLLERİ BİTİŞ */
+
+
 /*FOOTER BÖLÜMÜ BAŞLANGIÇ*/
 
 .footer {
@@ -2130,6 +2240,7 @@ section {
 
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
