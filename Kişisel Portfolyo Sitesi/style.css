@@ -1727,93 +1727,88 @@ section {
 
 
 /* İLETİŞİM FORMU GENEL STİLLERİ BAŞLANGIÇ */
+/* İLETİŞİM FORMU TASARIMI */
 .contact-form-section {
-    padding: 10rem 7% 5rem; /* Sitenin diğer bölümleriyle hizalı olması için */
-    background: transparent;
+    padding: 8rem 7%;
+    background: transparent; /* Genel arka plan şeffaf kalmalı */
 }
 
 .contact-container {
-    max-width: 800px; /* Formun çok yayılmaması için ideal genişlik */
+    max-width: 900px;
     margin: 0 auto;
-    text-align: center;
+    /* Formun ana kartı - Arka plan rengini belirginleştirdik */
+    background: rgba(255, 255, 255, 0.03); 
+    padding: 5rem;
+    border-radius: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .contact-form {
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
-/* Giriş Alanları Gruplama (Yan yana duranlar) */
 .input-group {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .input-box {
-    flex: 1 1 45%; /* Masaüstünde yan yana %45 genişlik */
+    flex: 1;
 }
 
-/* Input ve Textarea Ortak Tasarımı */
+/* INPUT İÇLERİ - Renkleri tersine çevirdik (Koyu İç Alan) */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 1.5rem;
+    padding: 1.8rem;
     font-size: 1.6rem;
     color: #fff;
-    background: rgba(255, 255, 255, 0.05); /* Çok hafif şeffaf arka plan */
-    border: 2px solid rgba(238, 238, 238, 0.1);
-    border-radius: 1rem;
-    transition: 0.3s ease;
+    /* İç alan artık daha koyu */
+    background: #080808; 
+    border: 2px solid rgba(0, 238, 255, 0.2); /* Çok hafif turkuaz sınır */
+    border-radius: 1.2rem;
+    transition: 0.4s ease;
 }
 
-/* Inputlara tıklandığında (Focus) neon efekti */
+/* Odaklanınca Parlama Efekti */
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: var(--main-color); /* Sitenin ana turkuaz rengi */
-    box-shadow: 0 0 15px var(--main-color);
+    background: #000;
+    border-color: var(--main-color);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
     outline: none;
 }
 
-/* Mesaj alanı tam genişlik */
 .textarea-box {
-    width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
-.contact-form textarea {
-    resize: none; /* Kullanıcının formu bozmasını engeller */
+/* BUTONU ORTALAMA */
+.form-footer {
+    display: flex;
+    justify-content: center; /* Yatayda tam orta */
+    align-items: center;
 }
 
-/* Gönder Butonu Özelleştirme */
 .contact-form .btn {
-    cursor: pointer;
-    border: none;
+    padding: 1.8rem 6rem;
     background: var(--main-color);
     color: #000;
-    font-weight: 600;
-    padding: 1.5rem 4rem;
-    border-radius: 4rem;
     font-size: 1.8rem;
-    transition: 0.4s ease-in-out;
+    font-weight: 700;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border: 2px solid var(--main-color);
 }
 
 .contact-form .btn:hover {
-    box-shadow: 0 0 25px var(--main-color);
-    transform: scale(1.05);
-}
-
-
-/* TABLET VE MOBİL UYUMU */
-@media (max-width: 768px) {
-    .input-box {
-        flex: 1 1 100%; /* Mobilde kutular alt alta gelir */
-    }
-    
-    .contact-form-section {
-        padding: 5rem 5%;
-    }
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 30px var(--main-color);
+    transform: translateY(-5px);
 }
 
 /* SENİN ÖZEL TV AYARLARIN İÇİN (1900px+) */
@@ -2240,6 +2235,7 @@ section {
 
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
