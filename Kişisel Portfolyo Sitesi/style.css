@@ -48,7 +48,9 @@ section {
 /* CSS SAYFA RESETLEME BİTİŞ */
 
 
-/*HEDER Bölümü Başlangıç*/
+
+
+/*HEDER BÖLÜMÜ BAŞLANGIÇ*/
 
 .header {
     position: fixed;
@@ -104,7 +106,9 @@ section {
     display: none;
 }
 
-/*HEDER Bölümü Son*/
+/*HEDER BÖLÜMÜ BİTİŞ*/
+
+
 
 
 /*ANASAYFA BÖLÜMÜ BAŞLANGIÇ*/
@@ -283,6 +287,8 @@ section {
     90%, 100% { width: calc(100% + 8px); } /* 3.6sn'de silinir ve yeni kelimeye hazırlanır */
 }
 /*ANASAYFA BÖLÜMÜ BİTİŞ*/
+
+
 
 
 /*EĞİTİM BÖLÜMÜ BAŞLANGIÇ*/
@@ -541,7 +547,6 @@ section {
 }
 
 
-
 /* Sertifika kutusuna tıklama imleci ekle */
 .cert-item {
     cursor: pointer;
@@ -613,6 +618,7 @@ section {
 }
 
 /*SERTİFİKALAR BÖLÜMÜ BİTİŞ*/
+
 
 
 
@@ -800,6 +806,8 @@ section {
 }
 
 
+/* --- BLOG BÖLÜMÜ RESPONSIVE AYARLARI --- */
+
 /* Responsive (Mobil Uyumluluk) */
 @media (max-width: 992px) {
     .blog-container {
@@ -909,6 +917,9 @@ section {
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
     transform: scale(1.05);
 }
+
+
+/* --- YOUTUBE KANALI RESPONSIVE AYARLARI --- */
 
 /* Mobil Uyumluluk */
 @media (max-width: 1024px) {
@@ -1021,6 +1032,7 @@ section {
     text-overflow: ellipsis; /* Çok uzun başlıkları keser */
 }
 
+
 /* --- LIGHTBOX (Büyütme Ekranı) --- */
 .lightbox {
     display: none;
@@ -1087,7 +1099,7 @@ section {
 
 
 
-/* --- FOTOĞRAF GALERİSİ RESPONSIVE AYARLAR --- */
+/* --- FOTOĞRAF GALERİSİ RESPONSIVE AYARLARI --- */
 
 /* 1. Geniş Ekranlar (Large Desktop - 1200px ve üzeri) */
 @media (min-width: 1200px) {
@@ -1120,6 +1132,7 @@ section {
         font-size: 3.5rem; /* Başlık boyutunu küçült */
     }
 }
+
 
 /* 4. Cep Telefonları (767px ve altı) */
 @media (max-width: 767px) {
@@ -1364,6 +1377,7 @@ section {
     transform: translateY(-3px);
 }
 
+
 /* Mobil için esneklik */
 @media (max-width: 768px) {
     .more-projects-box {
@@ -1523,6 +1537,7 @@ section {
 /*YETENEKLER BÖLÜMÜ BİTİŞ*/
 
 
+
 /*SİZDEN GELENLER BÖLÜMÜ BAŞALNGIÇ*/
 
 .testimonials {
@@ -1595,6 +1610,7 @@ section {
 }
 
 /*SİZDEN GELENLER BÖLÜMÜ BİTİŞ*/
+
 
 
 /*İLETİŞİM BÖÜMÜ BAŞLANGIÇ*/
@@ -1708,6 +1724,7 @@ section {
     color: #888;
 }
 
+
 /* Mobil Uyumluluk */
 @media (max-width: 1024px) {
     .contact-grid {
@@ -1723,11 +1740,12 @@ section {
         padding: 5rem 5%;
     }
 }
-/*İLETİŞİM BÖLÜMÜ BİTİŞ*/
+/* İLETİŞİM BÖLÜMÜ BİTİŞ */
 
 
-/* İLETİŞİM FORMU GENEL STİLLERİ BAŞLANGIÇ */
-/* İLETİŞİM FORMU GENEL STİLLERİ */
+
+/* İLETİŞİM FORMU BAŞLANGIÇ */
+
 .contact-form-section {
     padding: 10rem 7% 5rem; /* Sitenin diğer bölümleriyle hizalı olması için */
     background: transparent;
@@ -1834,7 +1852,7 @@ section {
     }
 }
 
-/* İLETİŞİM FORMU GENEL STİLLERİ BİTİŞ */
+/* İLETİŞİM FORMU BİTİŞ */
 
 
 /*FOOTER BÖLÜMÜ BAŞLANGIÇ*/
@@ -1955,7 +1973,9 @@ section {
 /*FOOTER BÖLÜMÜ BİTİŞ*/
 
 
+
 /*MEDYA SORGULARI BAŞLANGIÇ*/
+
 @media (max-width: 1285px) {
     html {
         font-size: 55%;
@@ -1967,6 +1987,7 @@ section {
         margin: 0 5rem;  
     }
 }
+
 
 @media (max-width: 991px) {
     header {
@@ -2005,6 +2026,7 @@ section {
     }
 }
 
+
 @media (max-width: 895px) {
     #menu-icon {
         display: block; /* Hamburger ikonunu görünür yapar */
@@ -2030,6 +2052,7 @@ section {
     }
 
     /* JavaScript tıklandığında bu sınıf devreye girer */
+    
     .navbar.active {
         right: 0; /* Gizli menüyü ekrana getirir */
     }
@@ -2071,6 +2094,7 @@ section {
         grid-template-columns: repeat(1,1fr);
     }
 }
+
 
 @media (max-width: 575px) {
     .header a {
@@ -2168,7 +2192,8 @@ section {
     }
 }
 
-/* --- PROJELER BÖLÜMÜ RESPONSIVE AYARLARI --- */
+
+/* --- PROJELER BÖLÜMÜ RESPONSIVE AYARLARI  BAŞLANGIÇ --- */
 
 /* Tablet ve Küçük Ekranlar (Laptops) */
 @media (max-width: 1200px) {
@@ -2181,6 +2206,7 @@ section {
     }
 }
 
+
 /* Tablet Modu (Portre) */
 @media (max-width: 991px) {
     .projects-grid {
@@ -2191,6 +2217,7 @@ section {
         font-size: 2.2rem; /* Başlığı hafif küçültür */
     }
 }
+
 
 /* Büyük Telefonlar ve Küçük Tabletler */
 @media (max-width: 768px) {
@@ -2222,6 +2249,7 @@ section {
     }
 }
 
+
 /* Küçük Telefonlar */
 @media (max-width: 480px) {
     .projects-header h2.heading {
@@ -2239,8 +2267,10 @@ section {
     }
 }
 
+/* --- PROJELER BÖLÜMÜ RESPONSIVE AYARLARI  BİTİŞ --- */
 
 /*MEDYA SORGULARI BİTİŞ*/
+
 
 
 
